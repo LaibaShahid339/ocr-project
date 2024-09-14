@@ -1,0 +1,15 @@
+
+# Ignore node_modules
+/frontend/node_modules
+/frontend/textextractor/node_modules
+
+# Ignore build files
+/frontend/build
+/frontend/textextractor/build
+
+# Ignore Python virtual environment
+/backend/venv
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
