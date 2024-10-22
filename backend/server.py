@@ -9,7 +9,7 @@ import numpy as np
 
 
 # Set the Tesseract-OCR executable path
-pytesseract.pytesseract.tesseract_cmd ="C:/Users/PMLS/Desktop/tesseract/tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd ="tesseract/tesseract.exe"
 
 #object detection model paths and preprocessing 
 frozen_model = "frozen_inference_graph.pb"

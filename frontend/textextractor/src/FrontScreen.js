@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 
 
 
+
+
 const FrontScreen = () => {
     const navigate = useNavigate();
     const handleExtracttext = () =>{
@@ -13,12 +15,15 @@ const FrontScreen = () => {
       navigate("/object");
     }
   return (
-
-    <div className='abc'>
+    
+// <div>
+//   <Testing/>
+// </div>
+    <div className='main'>
     <h1>
         Welcome To the Text and Object Detection App
     </h1>
-    <div className='but'>
+    <div className='buttons'>
     <button onClick ={handleExtracttext}   aria-label="Extract text from image">Extract Text</button>
     <button onClick={handleObjectDetection} aria-label="Detect objects in image">Object Detection</button>
     </div>

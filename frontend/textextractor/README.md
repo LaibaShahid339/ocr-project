@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+Text and Object Detection App
+This is a web-based application that allows users to capture or upload images to extract text using Optical Character Recognition (OCR) or detect objects using a Python backend server. The application is built with React for the frontend, and the backend uses Flask for object detection.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features:
+Text Extraction: Extract text from images using the Tesseract OCR engine on a Flask backend.
+Object Detection: Detect objects in images using a Python backend server powered by OpenCV and pre-trained models.
+Capture Image: Users can capture an image using their device's camera or upload one from their local storage.
+Screen Sharing: Allows users to share their screen to detect text in real-time.
+Interactive UI: The application provides an easy-to-use interface with modals for image previews and text extraction results.
 
-## Available Scripts
+Technologies Used
 
-In the project directory, you can run:
+Frontend:
+React: For building the user interface.
+Webcam: For accessing the camera and capturing images.
+Axios: For making HTTP requests to the backend server.
+React Router: For navigation between pages.
+CSS: For styling and layout of the application.
 
-### `npm start`
+Backend:
+Flask: Python web framework used to handle HTTP requests and integrate OCR and object detection models.
+OpenCV: For performing object detection using pre-trained models.
+Tesseract: For Optical Character Recognition (OCR) to extract text from images.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+How It Works
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Text Detection Flow:
+Image Capture/Upload: Users can capture an image using their device's camera or upload one from their local files.
+Send Image to Backend: The image is sent to the Flask backend where it is processed using Tesseract for text extraction.
+Display Extracted Text: The extracted text is sent back to the frontend and displayed in a modal.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Object Detection Flow:
+Image Upload: Users upload an image that is sent to the Flask backend server.
+Object Detection: The backend processes the image using OpenCV with a pre-trained model and detects objects in the image.
+Return Results: The results, including detected objects and bounding boxes, are returned to the frontend.
