@@ -107,7 +107,7 @@ const uploadAndExtractText = async (file) => {
   formData.append("image", file);
 
   try {
-    const response = await axios.post("http://127.0.0.1:5000/extract-text", formData, {
+    const response = await axios.post("http://43.204.38.234:5000/extract-text", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -211,7 +211,7 @@ const sendToBackend = async (blob) => {
   formData.append('image', blob, 'capture.jpg');
 
   try {
-      const response = await fetch('http://127.0.0.1:5000/extract-text', {
+      const response = await fetch('http://43.204.38.234:5000/extract-text', {
           method: 'POST',
           body: formData,
       });

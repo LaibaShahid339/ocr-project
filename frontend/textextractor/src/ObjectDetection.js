@@ -91,7 +91,7 @@ const uploadAndExtractObjects = async (file) => {
   formData.append("image", file);
 
   try {
-    const response = await axios.post("http://127.0.0.1:5000/object-detection", formData, {
+    const response = await axios.post("http://43.204.38.234:5000/object-detection", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -184,7 +184,7 @@ const sendToBackend = async (blob) => {
   formData.append('image', blob, 'capture.jpg');
 
   try {
-      const response = await fetch('http://127.0.0.1:5000/object-detection', {
+      const response = await fetch('http://43.204.38.234:5000/object-detection', {
           method: 'POST',
           body: formData,
       });
